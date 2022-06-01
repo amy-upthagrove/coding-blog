@@ -2,6 +2,8 @@ import { Component } from "react"
 
 import Header from "../../../components/header.js"
 import Footer from "../../../components/footer.js"
+import headMetadata from "../../../components/headMetadata.js"
+import HeadMetadata from "../../../components/headMetadata.js"
 
 export default class extends Component {
   static async getInitialProps ({ query }) {
@@ -13,6 +15,10 @@ export default class extends Component {
   render () {
     return (
       <div className="layout-wrapper">
+        <HeadMetadata
+          title={`Blog posts tagged as "${this.props.tag}" | Field Guide`}
+          metaDescription={`All blog posts tagged as "${this.props.tag}".`}
+          />
         <Header />
         <div className="blog-posts-container">
           <h1>Blog posts tagged as <u>{this.props.tag}</u></h1>

@@ -2,11 +2,16 @@ import { Component } from "react"
 
 import Header from "../components/header.js"
 import Footer from "../components/footer.js"
+import HeadMetadata from "../components/headMetadata.js"
 
 export default class extends Component {
   render () {
     return (
       <div className="layout-wrapper">
+        <HeadMetadata
+          title="Field Guide for the Sound Mind"
+          metaDescription="Hi there! I'm Amy and I'm an experienced AV engineer pivoting into fullstack development. This is where I nerd out about and share my experiences with AV, coding/programming, music, and learning in general. This entire site is hand-coded by me and will continue to grow as my own coding skills improve."
+          />
         <Header />
         <div className="homepage-container">
           <div className="homepage-introduction">
